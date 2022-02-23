@@ -1,0 +1,43 @@
+.menu{
+  float: right;
+  font-size: 24px;
+}
+
+#menu-icon.material-icons-outlined{
+  font-size: 40px;
+}
+
+#menu-icon:hover{
+  background-color: rgb(48, 47, 47);;
+}
+
+#menu-icon:active{
+  background-color: rgb(20, 20, 20);;
+}
+
+#menu-bar a{
+  text-decoration: none;
+  color: white;
+}
+
+#menu-bar a:hover{
+  background-color: rgb(34, 34, 34);;
+}
+
+.invisible{
+  visibility: hidden;
+}
+
+#page-container{
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+body{
+  background-color: rgb(63, 62, 62);
+  color: white;
+}
+
+a{
+  color: wheat;
+}

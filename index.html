@@ -1,145 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-    />
-    <script src="script.js" defer></script>
-    <title>Alex Collino Portfolio</title>
-  </head>
-  <body>
-    <div id="menu-icon" class="menu material-icons-outlined">menu</div>
-    <div id="menu-bar" class="menu invisible">
-      <div><a href="#top">Home</a></div>
-      <div><a href="#content-projects">Projects</a></div>
-      <div><a href="#content-contact">Contact</a></div>
-      <div><a href="#content-about">About</a></div>
-    </div>
-    <div id="page-container">
-      <div id="content-welcome">
-        <h2></h2>
-        Hello! My name is Alex Collino, and welcome to my portfolio page. Links
-        to my completed projects are accessible below or via the menu. I update
-        this page regularly, so check in to see what else I've made!
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Collino Portfolio</title>
+  <link rel="stylesheet" href="/styles/generic_styles.css">
+  <link rel="stylesheet" href="/styles/specific_styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="menu">
+    <img src="/assets/menu.png" id="menu-icon">
+  </div>
+  <div id="menu-bar" class="menu invisible">
+    <div><a href="#top">Home</a></div>
+    <div><a href="#content-projects">Projects</a></div>
+    <div><a href="#content-about">About</a></div>
+    <div><a href="#content-contact">Contact</a></div>
+  </div>
+  <div id="page-container" class="column-small centered gap-1 margin-1-top-bot">
+    <div id="content-welcome" class="width-44-90 row whole-page gap-1">
+      <div class="avatar-container">
+        <img src="/assets/8_bit_avatar.png" id="avatar">
       </div>
-      <div id="content-projects">
-        <h2>Projects</h2>
-        <p>
-          <a href="https://acollino.github.io/TV-maze/" target="_blank"
-            >TV Maze</a
-          >,
-          <a href="https://github.com/acollino/TV-maze" target="_blank"
-            ><img src="./assets/GitHub-Mark-Light-32px.png" class="github-icon"
-          /></a>
-        </p>
-        <p>
-          <a href="https://acollino.github.io/giphy-party/" target="_blank"
-            >GIPHY Party</a
-          >,
-          <a href="https://github.com/acollino/giphy-party" target="_blank"
-            ><img src="./assets/GitHub-Mark-Light-32px.png" class="github-icon"
-          /></a>
-        </p>
-        <p>
-          <a href="https://acollino.github.io/connect-four/" target="_blank"
-            >Connect Four</a
-          >,
-          <a href="https://github.com/acollino/connect-four" target="_blank"
-            ><img src="./assets/GitHub-Mark-Light-32px.png" class="github-icon"
-          /></a>
-        </p>
-        <p>
-          <a href="https://github.com/acollino/Meme-Generator" target="_blank"
-            >Meme Generator (Temporarily Private!)</a
-          >,
-          <a href="https://github.com/acollino/Meme-Generator" target="_blank"
-            ><img src="./assets/GitHub-Mark-Light-32px.png" class="github-icon"
-          /></a>
-        </p>
-        <p>
-          <a href="https://acollino.github.io/memory-game/" target="_blank"
-            >Memory Game</a
-          >,
-          <a href="https://github.com/acollino/memory-game" target="_blank"
-            ><img src="./assets/GitHub-Mark-Light-32px.png" class="github-icon"
-          /></a>
-        </p>
-        <p>
-          <a href="https://acollino.github.io/TODO-Tracker/" target="_blank"
-            >To-Do List App</a
-          >,
-          <a href="https://github.com/acollino/TODO-Tracker" target="_blank"
-            ><img src="./assets/GitHub-Mark-Light-32px.png" class="github-icon"
-          /></a>
-        </p>
-        <p>
-          <a href="https://acollino.github.io/calculator/" target="_blank"
-            >Calculator</a
-          >,
-          <a href="https://github.com/acollino/calculator" target="_blank"
-            ><img src="./assets/GitHub-Mark-Light-32px.png" class="github-icon"
-          /></a>
-        </p>
-        <p>
-          <a href="https://acollino.github.io/etch-a-sketch/" target="_blank"
-            >Etch-a-Sketch</a
-          >,
-          <a href="https://github.com/acollino/etch-a-sketch" target="_blank"
-            ><img src="./assets/GitHub-Mark-Light-32px.png" class="github-icon"
-          /></a>
-        </p>
-      </div>
-      <h2>Contact</h2>
-      <div id="content-contact">
-        <p>
-          <a
-            href="https://www.linkedin.com/in/alex-collino/"
-            target="_blank"
-            ><img src="./assets/LI-In-Bug.png" class="contact-icon"
-          /></a>
-        </p>
-        <p>
-          <a href="https://github.com/acollino" target="_blank">
-            <img
-              src="./assets/GitHub-Mark-Light-120px-plus.png"
-              class="contact-icon"
-          /></a>
-        </p>
-      </div>
-      <div id="content-about">
-        <h2>About</h2>
-        <p>
-          Throughout high school and college, I was interested in both biology
-          and computer science, but ultimately ended up pursuing a biology
-          major. I graduated from Brandeis University in 2015 with the goal of
-          attending medical school, and spent several years working as an
-          anesthesia technician before attending the Geisel School of Medicine
-          at Dartmouth College.
-        </p>
-        <p>
-          However, I struggled to be the version of myself I felt that I needed
-          to be - when I made mistakes, I should have studied harder. If I was
-          enjoying myself, I shouldn't let myself get distracted. I found I was
-          cutting ties with friends old and new, dropping hobbies I used to
-          love, and despite it all - I still wasn't good enough. This was
-          supposed to be what I wanted to be doing with my life, and I was
-          miserable.
-        </p>
-        <p>
-          Eventually, I requested a leave of absence from Geisel and moved to be
-          with my partner in LA. I'm now exploring what my future could look
-          like if I shifted my focus towards software development. To that end,
-          I'm enrolled in Springboard's Software Engineering course, and I'm
-          building up coding projects that are available above. I've also resumed
-          some of my hobbies; feel free to ask me about baking bread or nerd out
-          with me over D&D, MtG, or DotA!
-        </p>
+      <div class="column-small gap-1">
+        <div class="font-2">Hi, my name is Alex Collino.</div>
+        <div class="">I'm a web developer based in Los Angeles, CA.</div>
+        <div class="welcome-links">Take a look at what I've been <a href="#content-projects">working on</a>, read more
+          <a href="#content-about">about me</a>, or feel free to <a href="#content-contact">get in touch!</a>
+        </div>
       </div>
     </div>
-  </body>
+    <div id="content-projects">
+      <h2 class="margin-1-top-bot section-title">Recent Projects</h2>
+      <div class="row gap-1 margin-1-top-bot centered whole-page" id="card-container">
+        <div class="card border-rounded"><img class="card-image border-rounded"
+            src="https://repository-images.githubusercontent.com/518568840/f9ed65bc-0385-476f-aac6-db39211f902c">
+          <div class="transparent over-item hidden-container column space-evenly rapid-hide">
+            <h2 class="card-title">Cupcakes</h2>
+            <div class="block-text margin-half-top card-desc">A cupcake menu with a JSON API that allows
+              adding/deleting/editing without page refreshes.</div>
+            <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
+                href="https://acollino-cupcakes.herokuapp.com/" target="_blank"><img class="icon"
+                  src="/assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/cupcakes"
+                target="_blank" class="fancy-button button-white-blue"><img class="icon"
+                  src="/assets/github-large.png"></a>
+            </div>
+          </div>
+        </div>
+        <div class="card border-rounded"><img class="card-image border-rounded"
+            src="https://repository-images.githubusercontent.com/516166774/79c5fb07-4ce6-407b-8c80-2a1d93e3352b">
+          <div class="transparent over-item hidden-container column space-evenly rapid-hide">
+            <h2 class="card-title">Adopt</h2>
+            <div class="block-text margin-half-top card-desc">An example of a pet-adoption agency that uses server-side
+              databases to record pet information.</div>
+            <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
+                href="https://acollino-adopt.herokuapp.com/" target="_blank"><img class="icon"
+                  src="/assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/adopt"
+                target="_blank" class="fancy-button button-white-blue"><img class="icon"
+                  src="/assets/github-large.png"></a></div>
+          </div>
+        </div>
+        <div class="card border-rounded"><img class="card-image border-rounded"
+            src="https://repository-images.githubusercontent.com/511649535/47fcb60e-a506-4855-b000-1c642171ab46">
+          <div class="transparent over-item hidden-container column space-evenly rapid-hide">
+            <h2 class="card-title">Blogly</h2>
+            <div class="block-text margin-half-top card-desc">A model of a blog site; this uses relational databases for
+              keeping track of users, posts, and tags.</div>
+            <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
+                href="https://acollino-blogly.herokuapp.com/" target="_blank"><img class="icon"
+                  src="/assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/blogly"
+                target="_blank" class="fancy-button button-white-blue"><img class="icon"
+                  src="/assets/github-large.png"></a></div>
+          </div>
+        </div>
+        <div class="card border-rounded"><img class="card-image border-rounded"
+            src="https://repository-images.githubusercontent.com/490431317/6a4efb2f-381e-450e-aeef-7ed8b8596af5">
+          <div class="transparent over-item hidden-container column space-evenly rapid-hide">
+            <h2 class="card-title">Jeopardy</h2>
+            <div class="block-text margin-half-top card-desc">An in-browser recreation of Jeopardy. Powered by the
+              jService API, this version features questions from the actual game show!</div>
+            <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
+                href="https://acollino.github.io/jeopardy/" target="_blank"><img class="icon"
+                  src="/assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/jeopardy"
+                target="_blank" class="fancy-button button-white-blue"><img class="icon"
+                  src="/assets/github-large.png"></a>
+            </div>
+          </div>
+        </div>
+        <div class="card border-rounded"><img class="card-image border-rounded"
+            src="https://repository-images.githubusercontent.com/493752008/2cd00154-dde4-42fa-9fc5-9965253aaa38">
+          <div class="transparent over-item hidden-container column space-evenly rapid-hide">
+            <h2 class="card-title">Hack-Or-Snooze</h2>
+            <div class="block-text margin-half-top card-desc">This is Hack-or-Snooze, an imitation of the Y
+              Combinator news site, Hacker News! The page uses localStorage to keep track of a logged-in user, their
+              posts, and anything they've favorited or hidden.</div>
+            <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
+                href="https://acollino.github.io/hack-or-snooze/" target="_blank"><img class="icon"
+                  src="/assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/hack-or-snooze"
+                target="_blank" class="fancy-button button-white-blue"><img class="icon"
+                  src="/assets/github-large.png"></a>
+            </div>
+          </div>
+        </div>
+        <div class="card border-rounded"><img class="card-image border-rounded"
+            src="https://repository-images.githubusercontent.com/504617648/e1763c90-2d09-4285-8bf6-8ceee79bf052">
+          <div class="transparent over-item hidden-container column space-evenly rapid-hide">
+            <h2 class="card-title">Boggle</h2>
+            <div class="block-text margin-half-top card-desc">A web-based boggle game, this page relies on Flask, Jinja,
+              and JS to create the board and run the game. Flask sessions will record the board and track the user's
+              best score!</div>
+            <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
+                href="https://acollino-boggle.herokuapp.com/" target="_blank"><img class="icon"
+                  src="/assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/boggle"
+                target="_blank" class="fancy-button button-white-blue"><img class="icon"
+                  src="/assets/github-large.png"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="content-about" class="width-44-90 column-small whole-page">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        Throughout high school and college, I was interested in both biology
+        and computer science, but ultimately ended up pursuing a biology
+        major. I graduated from Brandeis University in 2015 with the goal of
+        attending medical school, and spent several years working as an
+        anesthesia technician before attending the Geisel School of Medicine
+        at Dartmouth College.
+      </p>
+      <p>
+        However, I struggled to be the version of myself I felt that I needed
+        to be - when I made mistakes, I should have studied harder. If I was
+        enjoying myself, I shouldn't let myself get distracted. I found I was
+        cutting ties with friends old and new, dropping hobbies I used to
+        love, and despite it all - I still wasn't good enough. This was
+        supposed to be what I wanted to be doing with my life, and I was
+        miserable.
+      </p>
+      <p>
+        Eventually, I requested a leave of absence from Geisel and moved to be
+        with my partner in LA. I decided to dive deeper into my interest in programming, 
+        so I enrolled in a coding program to prepare myself. I'm steadily progressing 
+        through Springboard's Software Engineering course, and I'm regularly pushing my 
+        new projects to Github. I've also resumed some of my hobbies; feel free to ask 
+        me about baking bread or nerd out with me over D&D, MtG, or DotA!
+      </p>
+    </div>
+    <div id="content-contact" class="column-small margin-2-bot">
+      <h2 class="section-title">Contact</h2>
+      <div class="row gap-1 margin-2-bot">
+        <a href="https://www.linkedin.com/in/alex-collino/" target="_blank"><img src="./assets/LI-In-Bug.png"
+            class="contact-icon margin-1" /></a>
+        <a href="https://github.com/acollino" target="_blank">
+          <img src="./assets/GitHub-Mark-Light-120px-plus.png" class="contact-icon margin-1" /></a>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

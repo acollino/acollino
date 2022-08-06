@@ -44,9 +44,9 @@ menuBar.addEventListener("mouseenter", function (e) {
 addFadeEvents();
 
 document.querySelector(".avatar-container").addEventListener("mouseenter", (evt) => {
-  document.querySelector("#avatar").setAttribute("src", "/assets/8_bit_avatar_eyebrows.png");
+  document.querySelector("#avatar").setAttribute("src", "./assets/8_bit_avatar_eyebrows.png");
 });
 
 document.querySelector(".avatar-container").addEventListener("mouseleave", (evt) => {
-  document.querySelector("#avatar").setAttribute("src", "/assets/8_bit_avatar.png");
+  document.querySelector("#avatar").setAttribute("src", "./assets/8_bit_avatar.png");
 });

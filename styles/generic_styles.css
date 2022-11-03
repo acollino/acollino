@@ -61,7 +61,7 @@ hr {
   text-align: center;
 }
 
-.gap-1{
+.gap-1 {
   gap: 1rem;
 }
 
@@ -205,18 +205,18 @@ button:active,
 
 @media (min-width: 769px) {
   html {
-    font-size: 0.975rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 1025px) {
   html {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 }
 
 @media (min-width: 1201px) {
   html {
-    font-size: 1.025rem;
+    font-size: 1.25rem;
   }
 }

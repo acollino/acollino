@@ -1,16 +1,17 @@
 const menuIcon = document.querySelector("#menu-icon");
 const menuBar = document.querySelector("#menu-bar");
-
-let menuInUseTimer;
+const menuButtons = Array.from(
+  document.querySelectorAll("#menu-bar .jump-link-button")
+);
 
 function revealMenu() {
-  menuBar.classList.remove("invisible");
+  menuBar.classList.remove("shrunk");
+  menuIcon.classList.add("menu-icon-expanded");
 }
 
 function hideMenu() {
-  menuInUseTimer = setTimeout(function () {
-    menuBar.classList.add("invisible");
-  }, 100);
+  menuBar.classList.add("shrunk");
+  menuIcon.classList.remove("menu-icon-expanded");
 }
 
 function addFadeEvents() {
@@ -31,22 +32,38 @@ function addFadeEvents() {
   }
 }
 
+function scrollToID(id) {
+  let target;
+  if (id === "top") {
+    target = document.body;
+  } else {
+    target = document.querySelector(`#${id}`);
+  }
+  target.scrollIntoView({ behavior: "smooth" });
+}
+
 menuIcon.addEventListener("click", revealMenu);
 
-menuIcon.addEventListener("mouseleave", hideMenu);
-
-menuBar.addEventListener("mouseleave", hideMenu);
-
-menuBar.addEventListener("mouseenter", function (e) {
-  clearTimeout(menuInUseTimer);
+document.body.addEventListener("click", (evt) => {
+  if (evt.target != menuIcon && !menuButtons.includes(evt.target)) {
+    hideMenu();
+  }
 });
 
 addFadeEvents();
 
-document.querySelector(".avatar-container").addEventListener("mouseenter", (evt) => {
-  document.querySelector("#avatar").setAttribute("src", "./assets/8_bit_avatar_eyebrows.png");
-});
+document
+  .querySelector(".avatar-container")
+  .addEventListener("mouseenter", (evt) => {
+    document
+      .querySelector("#avatar")
+      .setAttribute("src", "./assets/8_bit_avatar_eyebrows.png");
+  });
 
-document.querySelector(".avatar-container").addEventListener("mouseleave", (evt) => {
-  document.querySelector("#avatar").setAttribute("src", "./assets/8_bit_avatar.png");
-});
+document
+  .querySelector(".avatar-container")
+  .addEventListener("mouseleave", (evt) => {
+    document
+      .querySelector("#avatar")
+      .setAttribute("src", "./assets/8_bit_avatar.png");
+  });

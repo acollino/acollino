@@ -12,14 +12,14 @@
 </head>
 
 <body>
-  <div class="menu">
-    <img src="./assets/menu.png" id="menu-icon">
+  <div class="menu menu-container">
+    <img src="./assets/menu.svg" id="menu-icon" class="menu-icon-gray">
   </div>
-  <div id="menu-bar" class="menu invisible">
-    <div><a href="#top">Home</a></div>
-    <div><a href="#content-projects">Projects</a></div>
-    <div><a href="#content-about">About</a></div>
-    <div><a href="#content-contact">Contact</a></div>
+  <div id="menu-bar" class="menu shrunk">
+    <div><button class="jump-link-button" onclick="scrollToID('top')">Home</button></div>
+    <div><button class="jump-link-button" onclick="scrollToID('content-projects')">Projects</button></div>
+    <div><button class="jump-link-button" onclick="scrollToID('content-about')">About</button></div>
+    <div><button class="jump-link-button" onclick="scrollToID('content-contact')">Contact</button></div>
   </div>
   <div id="page-container" class="column-small centered gap-1 margin-1-top-bot">
     <div id="content-welcome" class="width-44-90 row whole-page gap-1">
@@ -27,10 +27,13 @@
         <img src="./assets/8_bit_avatar.png" id="avatar">
       </div>
       <div class="column-small gap-1">
-        <div class="font-2">Hi, my name is Alex Collino.</div>
+        <div class="font-2">Hi, I'm Alex Collino.</div>
         <div class="">I'm a web developer based in Los Angeles, CA.</div>
-        <div class="welcome-links">Take a look at what I've been <a href="#content-projects">working on</a>, read more
-          <a href="#content-about">about me</a>, or feel free to <a href="#content-contact">get in touch!</a>
+        <div class="welcome-message">Take a look at what I've been <button class="jump-link-button"
+            onclick="scrollToID('content-projects')">working on</button>,
+          read more
+          <button class="jump-link-button" onclick="scrollToID('content-about')">about me</button>, or feel free to
+          <button class="jump-link-button" onclick="scrollToID('content-contact')">get in touch!</button>
         </div>
       </div>
     </div>
@@ -38,43 +41,15 @@
       <h2 class="margin-1-top-bot section-title">Recent Projects</h2>
       <div class="row gap-1 margin-1-top-bot centered whole-page" id="card-container">
         <div class="card border-rounded"><img class="card-image border-rounded"
-            src="https://repository-images.githubusercontent.com/518568840/f9ed65bc-0385-476f-aac6-db39211f902c">
+            src="https://repository-images.githubusercontent.com/538739316/8bbc6598-5261-475f-9e0b-d9775aaaf7d7">
           <div class="transparent over-item hidden-container column space-evenly rapid-hide">
-            <h2 class="card-title">Cupcakes</h2>
-            <div class="block-text margin-half-top card-desc">A cupcake menu with a JSON API that allows
-              adding/deleting/editing without page refreshes.</div>
+            <h2 class="card-title">Snake</h2>
+            <div class="block-text margin-half-top card-desc">A browser-based version of the classic snake game.</div>
             <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
-                href="https://acollino-cupcakes.herokuapp.com/" target="_blank"><img class="icon"
-                  src="./assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/cupcakes"
+                href="https://acollino-snake.herokuapp.com/" target="_blank"><img class="icon"
+                  src="/assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/snake"
                 target="_blank" class="fancy-button button-white-blue"><img class="icon"
-                  src="./assets/github-large.png"></a>
-            </div>
-          </div>
-        </div>
-        <div class="card border-rounded"><img class="card-image border-rounded"
-            src="https://repository-images.githubusercontent.com/516166774/79c5fb07-4ce6-407b-8c80-2a1d93e3352b">
-          <div class="transparent over-item hidden-container column space-evenly rapid-hide">
-            <h2 class="card-title">Adopt</h2>
-            <div class="block-text margin-half-top card-desc">An example of a pet-adoption agency that uses server-side
-              databases to record pet information.</div>
-            <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
-                href="https://acollino-adopt.herokuapp.com/" target="_blank"><img class="icon"
-                  src="./assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/adopt"
-                target="_blank" class="fancy-button button-white-blue"><img class="icon"
-                  src="./assets/github-large.png"></a></div>
-          </div>
-        </div>
-        <div class="card border-rounded"><img class="card-image border-rounded"
-            src="https://repository-images.githubusercontent.com/511649535/47fcb60e-a506-4855-b000-1c642171ab46">
-          <div class="transparent over-item hidden-container column space-evenly rapid-hide">
-            <h2 class="card-title">Blogly</h2>
-            <div class="block-text margin-half-top card-desc">A model of a blog site; this uses relational databases for
-              keeping track of users, posts, and tags.</div>
-            <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
-                href="https://acollino-blogly.herokuapp.com/" target="_blank"><img class="icon"
-                  src="./assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/blogly"
-                target="_blank" class="fancy-button button-white-blue"><img class="icon"
-                  src="./assets/github-large.png"></a></div>
+                  src="/assets/github-large.png"></a></div>
           </div>
         </div>
         <div class="card border-rounded"><img class="card-image border-rounded"
@@ -85,39 +60,62 @@
               jService API, this version features questions from the actual game show!</div>
             <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
                 href="https://acollino.github.io/jeopardy/" target="_blank"><img class="icon"
-                  src="./assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/jeopardy"
+                  src="/assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/jeopardy"
                 target="_blank" class="fancy-button button-white-blue"><img class="icon"
-                  src="./assets/github-large.png"></a>
-            </div>
+                  src="/assets/github-large.png"></a></div>
+          </div>
+        </div>
+        <div class="card border-rounded"><img class="card-image border-rounded"
+            src="https://repository-images.githubusercontent.com/518568840/f9ed65bc-0385-476f-aac6-db39211f902c">
+          <div class="transparent over-item hidden-container column space-evenly">
+            <h2 class="card-title">Cupcakes</h2>
+            <div class="block-text margin-half-top card-desc">A cupcake menu with a JSON API that allows
+              adding/deleting/editing without page refreshes.</div>
+            <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
+                href="https://acollino-cupcakes.herokuapp.com/" target="_blank"><img class="icon"
+                  src="/assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/cupcakes"
+                target="_blank" class="fancy-button button-white-blue"><img class="icon"
+                  src="/assets/github-large.png"></a></div>
+          </div>
+        </div>
+        <div class="card border-rounded"><img class="card-image border-rounded"
+            src="https://repository-images.githubusercontent.com/516166774/79c5fb07-4ce6-407b-8c80-2a1d93e3352b">
+          <div class="transparent over-item hidden-container column space-evenly rapid-hide">
+            <h2 class="card-title">Adopt</h2>
+            <div class="block-text margin-half-top card-desc">An example of a pet-adoption agency that uses server-side
+              databases to record pet information.</div>
+            <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
+                href="https://acollino-adopt.herokuapp.com/" target="_blank"><img class="icon"
+                  src="/assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/adopt"
+                target="_blank" class="fancy-button button-white-blue"><img class="icon"
+                  src="/assets/github-large.png"></a></div>
+          </div>
+        </div>
+        <div class="card border-rounded"><img class="card-image border-rounded"
+            src="https://repository-images.githubusercontent.com/511649535/47fcb60e-a506-4855-b000-1c642171ab46">
+          <div class="transparent over-item hidden-container column space-evenly">
+            <h2 class="card-title">Blogly</h2>
+            <div class="block-text margin-half-top card-desc">A model of a blog site; this uses relational databases for
+              keeping track of users, posts, and tags.</div>
+            <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
+                href="https://acollino-blogly.herokuapp.com/" target="_blank"><img class="icon"
+                  src="/assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/blogly"
+                target="_blank" class="fancy-button button-white-blue"><img class="icon"
+                  src="/assets/github-large.png"></a></div>
           </div>
         </div>
         <div class="card border-rounded"><img class="card-image border-rounded"
             src="https://repository-images.githubusercontent.com/493752008/2cd00154-dde4-42fa-9fc5-9965253aaa38">
-          <div class="transparent over-item hidden-container column space-evenly rapid-hide">
+          <div class="transparent over-item hidden-container column space-evenly">
             <h2 class="card-title">Hack-Or-Snooze</h2>
-            <div class="block-text margin-half-top card-desc">This is Hack-or-Snooze, an imitation of the Y
-              Combinator news site, Hacker News! The page uses localStorage to keep track of a logged-in user, their
-              posts, and anything they've favorited or hidden.</div>
+            <div class="block-text margin-half-top card-desc">This is Hack-or-Snooze, an imitation of the Y Combinator
+              news site, Hacker News! The page uses localStorage to keep track of a logged-in user, their posts, and
+              anything they've favorited or hidden.</div>
             <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
                 href="https://acollino.github.io/hack-or-snooze/" target="_blank"><img class="icon"
-                  src="./assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/hack-or-snooze"
+                  src="/assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/hack-or-snooze"
                 target="_blank" class="fancy-button button-white-blue"><img class="icon"
-                  src="./assets/github-large.png"></a>
-            </div>
-          </div>
-        </div>
-        <div class="card border-rounded"><img class="card-image border-rounded"
-            src="https://repository-images.githubusercontent.com/504617648/e1763c90-2d09-4285-8bf6-8ceee79bf052">
-          <div class="transparent over-item hidden-container column space-evenly rapid-hide">
-            <h2 class="card-title">Boggle</h2>
-            <div class="block-text margin-half-top card-desc">A web-based boggle game, this page relies on Flask, Jinja,
-              and JS to create the board and run the game. Flask sessions will record the board and track the user's
-              best score!</div>
-            <div class="row margin-half-top space-evenly card-links"><a class="fancy-button button-blue"
-                href="https://acollino-boggle.herokuapp.com/" target="_blank"><img class="icon"
-                  src="./assets/open_in_new_icon_white.png"></a><a href="https://github.com/acollino/boggle"
-                target="_blank" class="fancy-button button-white-blue"><img class="icon"
-                  src="./assets/github-large.png"></a></div>
+                  src="/assets/github-large.png"></a></div>
           </div>
         </div>
       </div>
@@ -143,10 +141,10 @@
       </p>
       <p>
         Eventually, I requested a leave of absence from Geisel and moved to be
-        with my partner in LA. I decided to dive deeper into my interest in programming, 
-        so I enrolled in a coding program to prepare myself. I'm steadily progressing 
-        through Springboard's Software Engineering course, and I'm regularly pushing my 
-        new projects to Github. I've also resumed some of my hobbies; feel free to ask 
+        with my partner in LA. I decided to dive deeper into my interest in programming,
+        so I enrolled in a coding program to prepare myself. I'm steadily progressing
+        through Springboard's Software Engineering course, and I'm regularly pushing my
+        new projects to Github. I've also resumed some of my hobbies; feel free to ask
         me about baking bread or nerd out with me over D&D, MtG, or DotA!
       </p>
     </div>
@@ -157,6 +155,10 @@
             class="contact-icon margin-1" /></a>
         <a href="https://github.com/acollino" target="_blank">
           <img src="./assets/GitHub-Mark-Light-120px-plus.png" class="contact-icon margin-1" /></a>
+        <address>
+          <a href="mailto:arcollino@gmail.com">
+            <img src="./assets/email.svg" class="contact-icon margin-1" /></a>
+        </address>
       </div>
     </div>
   </div>
